@@ -37,4 +37,15 @@ public class MoodAnalyzerTest {
 		Assert.assertEquals("Happy", actualResult);
 	}
 
+	/**
+	 * Method to check if any is present in string, it should return Happy. Used the
+	 * assert equals to check if the method output is happy.
+	 */
+	@Test
+	public void givenMessage_IsAny_ShouldReturnHappy() {
+		moodAnalyzer.setMessage("I am in Any Mood");
+		String actualResult = moodAnalyzer.analyseMood();
+		Assert.assertEquals("Happy", actualResult);
+	}
+
 }
