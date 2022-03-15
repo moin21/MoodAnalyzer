@@ -13,10 +13,18 @@ public class MoodAnalyzer {
 	}
 
 	/**
-	 *  Default constructor.
+	 * Default constructor.
 	 */
 	public MoodAnalyzer() {
 
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
 	/**
@@ -27,11 +35,13 @@ public class MoodAnalyzer {
 	 * @param message - String message from the main method.
 	 * @return - We will return the mood Happy or Sad
 	 */
-	public String analyseMood(String message) {
+	public String analyseMood() {
 		if (message.toLowerCase().contains("happy")) {
 			return "Happy";
 		} else if (message.toLowerCase().contains("sad")) {
 			return "Sad";
+		} else if (message.toLowerCase().contains("any")) {
+			return "Happy";
 		} else {
 			return null;
 		}
