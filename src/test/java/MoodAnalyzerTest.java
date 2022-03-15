@@ -9,6 +9,8 @@ import com.moodanalyzer.MoodAnalyzer;
  *
  */
 public class MoodAnalyzerTest {
+
+	MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
 	/**
 	 * Method to check the sad mood. Provided string with sad then method should
 	 * return sad. Used the assert equals to check if the method output is sad.
@@ -16,7 +18,6 @@ public class MoodAnalyzerTest {
 	 */
 	@Test
 	public void givenMessage_IsSad_ShouldReturnSad() {
-		MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
 		String actualResult = moodAnalyzer.analyseMood("I am Sad Mood");
 		Assert.assertEquals("Sad", actualResult);
 	}
@@ -27,7 +28,6 @@ public class MoodAnalyzerTest {
 	 */
 	@Test
 	public void givenMessage_IsHappy_ShouldReturnHappy() {
-		MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
 		String actualResult = moodAnalyzer.analyseMood("I am in Happy Mood");
 		Assert.assertEquals("Happy", actualResult);
 	}
