@@ -48,4 +48,14 @@ public class MoodAnalyzerTest {
 		Assert.assertEquals("Happy", actualResult);
 	}
 
+	/**
+	 * Method to check if mood is invalid. it should return Invalid Mood assert
+	 * equals to check if the method output is Invalid Mood
+	 */
+	@Test
+	public void givenMessage_IsInvalid_ShouldReturnInvalidMood() {
+		moodAnalyzer.setMessage(null);
+		String actualResult = moodAnalyzer.analyseMood();
+		Assert.assertEquals("Invalid Mood", actualResult);
+	}
 }
